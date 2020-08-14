@@ -9,3 +9,9 @@
 <h3><a href="/addauthor">Add Author</a></h3>
 <br />
 <h3><a href="/addrecipe">Add Recipe</a></h3>
+<br />
+{% if not request.user.is_authenticated %}
+<h3><a href="/login">Login</a></h3>
+{% else %}
+<h3><a href="/logout">Logout</a></h3>
+{% endif %}
