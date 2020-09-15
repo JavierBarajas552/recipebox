@@ -5,3 +5,7 @@
   <li><a href="/recipe/{{recipe.id}}">{{recipe.title}}</a></li>
   {% endfor %}
 </ul>
+{% for author in favorites %}
+<a href="/recipe/{{author.recipe.id}}">{{author.recipe}}</a>
+{% endfor %}
+

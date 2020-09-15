@@ -21,10 +21,12 @@ urlpatterns = [
     path('', views.index, name="homepage"),
     path('recipe/<int:recipe_id>/', views.recipe_detail),
     path('author/<int:author_id>/', views.author_details),
+    path('recipe/edit/<int:recipe_id>/', views.edit_view),
     path('addrecipe/', views.add_recipe),
     path('addauthor/', views.add_author),
+    path('recipe/favorite/<int:recipe_id>/', views.favorite_recipe),
     path('login/', views.login_view),
-    path('logout/', views.logout_veiw),
+    path('logout/', views.logout_view),
     path('admin/', admin.site.urls),
     
 ]
